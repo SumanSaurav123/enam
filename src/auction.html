@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap Navbar Dropdown Login and Signup Form with Social Buttons</title>
+<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="css/auction.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript">
+  // Prevent dropdown menu from closing when click inside the form
+  $(document).on("click", ".navbar-right .dropdown-menu", function(e){
+    e.stopPropagation();
+  });
+</script>
+</head> 
+<body>
+    <div class="wrapper">
+            <aside class="main_sidebar">
+                <ul>
+                    <li><span>Lot Number : </span><a href="#" id="lotnumber"></a></li>
+                    <li><span>Product :</span><a href="#" id="name"></a></li>
+                    <li><span>Mandi : </span><a href="#" id="mandi"></a></li>
+                    <li><span>City : </span><a href="#" id="city"></a></li>
+                    <li><span>State : </span><a href="#" id="state"></a></li>
+                    <li><span>Starting Date : </span><a href="#" id="sd"></a></li>
+                    <li><span>Ending Date : </span><a href="#" id="ed"></a></li>
+                    <li><span>Remainng Time : </span><a href="#" id="rt"></a></li>
+                    <li><span>Highest Bid : </span><a href="#" id="hb">-</a></li>
+                    <li><span>No of Bids : </span><a href="#">-</a></li>
+                </ul>
+            </aside>
+    </div>
+    <div class="contianer">
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+                <h1 style="color:white;">Bidding Room</h1>
+            </div>
+        </div>
+    </div>
+    <div class="contianer">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+                <h3 style="color:white;">Your Address : <span id="address"></span></h3>
+            </div>
+        </div>
+        <div class="row"> 
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+                <h3 style="color:white;">Your Balance : <span id="balance"></span></h3>
+            </div>
+        </div>
+        <div class="row"> 
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+                <h3 style="color:white;">Your Bid : <span id="bidamount">0 ETH</span></h3>
+        </div>
+        <div class="row"> 
+            <div class="col-md-4"></div>
+            <div class="col-md-2">
+                <h3 style="color:white;">Increase Bid By : </h3>
+            </div>
+            <div style="margin-top:18px"  class="col-md-3">
+                <div class="form-group">
+                    <select id="value" class="form-control"> 
+                        <option value=2>2 ETH</option>
+                        <option value=5>5 ETH</option> 
+                        <option value=7>7 ETH</option>
+                        <option value=10>10 ETH</option>
+                        <option value=20>20 ETH</option>
+                        <option value=40>40 ETH</option>
+                        <option value=50>50 ETH</option>
+                    </select>
+                </div>
+            </div>
+            <div style="margin-top:18px"  class="col-md-3">
+                <button class="btn btn-success" onclick="AppAuction.bid()">Submit Your Bid</button>
+                <a href="buyerproduct.html" class="btn btn-danger">Go Back</a>
+            </div>
+    </div>
+    </div>
+
+        
+</body>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.js"></script>
+<script src="js/app.js"></script>
+<script src="js/auction.js"></script>
+</html>                                                                                    
